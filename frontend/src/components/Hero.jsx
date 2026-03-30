@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
     return (
@@ -29,11 +30,33 @@ const Hero = () => {
                     </div>
 
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-6 md:mb-8 tracking-tight text-white">
+                        <span className="text-3xl md:text-5xl lg:text-6xl block mb-2 text-gray-300 font-medium tracking-normal"> Hello I am</span>
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#c084fc] via-[#a855f7] to-[#8b5cf6]">Muhammad </span><br />
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#67e8f9] via-[#22d3ee] to-[#3b82f6]">Mudassar</span>
                     </h1>
+
+                    <div className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 md:mb-8 h-[40px] md:h-[50px] flex items-center">
+                        <TypeAnimation
+                            sequence={[
+                                "MERN Stack Developer",
+                                1000,
+                                'Frontend Developer',
+                                1000,
+                                'Wordpress Developer',
+                                1000,
+                                'UI/UX Designer',
+                                1000,
+                                'Creative Thinker',
+                                1000,
+                            ]}
+                            wrapper="span"
+                            speed={50}
+                            className="text-transparent bg-clip-text bg-gradient-to-r from-[#22d3ee] to-[#a855f7]"
+                            repeat={Infinity}
+                        />
+                    </div>
+
                     <p className="text-gray-400 text-lg md:text-xl mb-8 md:mb-10 max-w-[600px] leading-relaxed">
-                        Full-stack developer specializing in building modern web applications.
                         I create <span className="text-white font-medium">high-performance</span>,
                         <span className="text-white font-medium"> scalable</span> solutions that drive meaningful user experiences.
                     </p>

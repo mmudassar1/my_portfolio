@@ -13,6 +13,9 @@ import Footer from './components/Footer';
 import Reviews from './components/Reviews';
 import Blogs from './components/Blogs';
 import CTA from './components/CTA';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsOfService from './components/TermsOfService';
+import BlogPost from './components/BlogPost';
 import { useLocation } from 'react-router-dom';
 
 const Home = () => (
@@ -49,7 +52,10 @@ function AppContent() {
         <Route path="/projects" element={<PageWrapper><Projects /></PageWrapper>} />
         <Route path="/reviews" element={<PageWrapper><Reviews /></PageWrapper>} />
         <Route path="/blogs" element={<PageWrapper><Blogs /></PageWrapper>} />
+        <Route path="/blog/:id" element={<PageWrapper><BlogPost /></PageWrapper>} />
         <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
+        <Route path="/privacy-policy" element={<PageWrapper><PrivacyPolicy /></PageWrapper>} />
+        <Route path="/terms-of-service" element={<PageWrapper><TermsOfService /></PageWrapper>} />
       </Routes>
       {!hideCTA && <CTA />}
       <Footer />

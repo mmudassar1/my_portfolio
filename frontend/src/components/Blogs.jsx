@@ -1,7 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Blogs = () => {
-    const blogs = [
+export const blogData = [
         {
             id: 1,
             title: "Building Scalable Architectures with modern MERN",
@@ -28,12 +28,13 @@ const Blogs = () => {
         }
     ];
 
+const Blogs = () => {
     return (
         <section className="py-20 max-w-[1400px] mx-auto px-8" id="blogs">
             <h2 className="text-4xl text-center mb-12 font-bold text-white">Latest <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#67e8f9] via-[#22d3ee] to-[#06b6d4]">Articles</span></h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {blogs.map(blog => (
-                    <div key={blog.id} className="glow-card group">
+                {blogData.map(blog => (
+                    <Link to={`/blog/${blog.id}`} key={blog.id} className="glow-card group block">
                         <div className="glow-card-bg"></div>
                         <div className="glow-card-content overflow-hidden">
                             <img src={blog.image} alt={blog.title} className="w-full h-[200px] object-cover border-b border-white/10" />
@@ -44,10 +45,10 @@ const Blogs = () => {
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-4">{blog.title}</h3>
                                 <p className="text-[#9ca3af] mb-6 line-clamp-2">{blog.excerpt}</p>
-                                <button className="text-white border-b border-[#22d3ee] pb-0.5 hover:text-[#22d3ee] hover:border-white transition-all">Read More →</button>
+                                <span className="inline-block text-white border-b border-[#22d3ee] pb-0.5 group-hover:text-[#22d3ee] group-hover:border-white transition-all">Read More →</span>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </section>
