@@ -10,39 +10,39 @@ const Projects = () => {
     const featuredProjects = [
         {
             id: 1,
-            image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80',
-            title: 'E-Commerce Platform',
+            image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80',
+            title: 'Cloth Shoping Website',
             badge: 'Public',
-            description: 'A full-featured MERN stack e-commerce platform with product search, cart, and payment processing. Features JWT authentication and Stripe API integration.',
-            tags: ['MERN', 'Zustand', 'Stripe'],
+            description: 'A full-featured e-commerce platform with product categories and payment integration.',
+            tags: ['React', 'Commerce'],
             stars: 45,
             forks: 12,
             repoUrl: 'https://github.com/mmudassar1/codesistensy_ecommerce',
-            demoUrl: '#'
+            demoUrl: 'https://codesistencyecommerce.netlify.app/'
         },
         {
             id: 2,
-            image: 'https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80',
-            title: 'Full Stack Chat App',
+            image: 'https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&q=80',
+            title: 'Omni Food Project',
             badge: 'Public',
-            description: 'Real-time chat application with user authentication and private messaging using WebSocket (Socket.io) for instant delivery.',
-            tags: ['Socket.io', 'React', 'Node.js'],
+            description: 'A premium food delivery and subscription service platform.',
+            tags: ['React', 'Food'],
             stars: 32,
             forks: 8,
-            repoUrl: 'https://github.com/mmudassar1/Chat-App1',
-            demoUrl: '#'
+            repoUrl: 'https://github.com/mmudassar1/Omni-food-project',
+            demoUrl: 'https://cheerful-rabanadas-a43556.netlify.app/'
         },
         {
             id: 3,
-            image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80',
-            title: 'Deepseek AI Integration',
+            image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80',
+            title: 'Store King',
             badge: 'Public',
-            description: 'Advanced AI-driven application focusing on natural language processing and real-time response generation.',
-            tags: ['AI', 'Next.js', 'Deepseek'],
-            stars: 67,
-            forks: 15,
-            repoUrl: 'https://github.com/mmudassar1/deepseekai',
-            demoUrl: '#'
+            description: 'An advanced storefront and inventory management system.',
+            tags: ['Dashboard', 'React'],
+            stars: 28,
+            forks: 5,
+            repoUrl: 'https://github.com/mmudassar1/storeking',
+            demoUrl: 'https://delightful-sunshine-bf5a04.netlify.app/'
         }
     ];
 
@@ -53,15 +53,34 @@ const Projects = () => {
                     const response = await fetch('https://api.github.com/users/mmudassar1/repos?sort=updated&per_page=100');
                     if (!response.ok) throw new Error('Failed to fetch');
                     const data = await response.json();
-                    
+
                     const formattedRepos = data
                         .filter(repo => !repo.fork)
                         .map((repo) => {
                             const repoName = repo.name.replace(/[-_]/g, ' ');
-                            
+
+                            const t = repoName.toLowerCase();
+
+                            // Demo URL overriding
+                            let customDemoUrl = repo.homepage || repo.html_url;
+                            if (t.includes('password')) {
+                                customDemoUrl = 'https://sensational-valkyrie-c52022.netlify.app/';
+                            } else if (t.includes('simon') || t.includes('siemen')) {
+                                customDemoUrl = 'https://silver-bonbon-819e69.netlify.app/';
+                            } else if (t.includes('cosmetic')) {
+                                customDemoUrl = 'https://exquisite-crostata-b423e7.netlify.app/';
+                            } else if (t.includes('omni') || t.includes('food')) {
+                                customDemoUrl = 'https://cheerful-rabanadas-a43556.netlify.app/';
+                            } else if (t.includes('store') && t.includes('king') || t.includes('storeking')) {
+                                customDemoUrl = 'https://delightful-sunshine-bf5a04.netlify.app/';
+                            } else if (t.includes('ecommerce') || t.includes('e commerce')) {
+                                customDemoUrl = 'https://codesistencyecommerce.netlify.app/';
+                            } else if (t.includes('hotel')) {
+                                customDemoUrl = 'https://regal-smakager-693720.netlify.app/';
+                            }
+
                             // Keyword-based image logic
                             let heroImage = '';
-                            const t = repoName.toLowerCase();
                             if (t.includes('ecommerce') || t.includes('shop') || t.includes('cart') || t.includes('store')) {
                                 heroImage = 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80'; // E-commerce
                             } else if (t.includes('chat') || t.includes('message') || t.includes('talk') || t.includes('social')) {
@@ -106,13 +125,13 @@ const Projects = () => {
                                 id: repo.id,
                                 image: heroImage,
                                 title: repoName,
-                            badge: repo.private ? 'Private' : 'Public',
-                            description: repo.description || 'A detailed project repository deployed on GitHub.',
-                            tags: repo.language ? [repo.language] : ['Code'],
-                            stars: repo.stargazers_count,
-                            forks: repo.forks_count,
-                            repoUrl: repo.html_url,
-                            demoUrl: repo.homepage || repo.html_url
+                                badge: repo.private ? 'Private' : 'Public',
+                                description: repo.description || 'A detailed project repository deployed on GitHub.',
+                                tags: repo.language ? [repo.language] : ['Code'],
+                                stars: repo.stargazers_count,
+                                forks: repo.forks_count,
+                                repoUrl: repo.html_url,
+                                demoUrl: customDemoUrl
                             };
                         });
                     setGithubRepos(formattedRepos);
@@ -140,44 +159,44 @@ const Projects = () => {
                         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#22d3ee]"></div>
                     </div>
                 ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {displayProjects.map(project => (
-                        <div key={project.id} className="glow-card group">
-                            <div className="glow-card-bg"></div>
-                            <div className="glow-card-content overflow-hidden">
-                                <img src={project.image} alt={project.title} className="w-full h-[200px] object-cover border-b border-white/10" />
-                                <div className="p-6">
-                                    <div className="flex justify-between items-center mb-4">
-                                        <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                                        <span className="text-[0.75rem] px-2 py-1 bg-white/10 rounded-full border border-white/10 text-white">{project.badge}</span>
-                                    </div>
-                                    <p className="text-[#9ca3af] text-sm mb-6 line-clamp-3">{project.description}</p>
-                                    <div className="flex justify-between items-center mb-6 text-[0.85rem]">
-                                        <div className="flex gap-2">
-                                            {project.tags.map(tag => (
-                                                <span key={tag} className="before:content-['•'] before:text-[#3b82f6] before:mr-1 text-white">{tag}</span>
-                                            ))}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {displayProjects.map(project => (
+                            <div key={project.id} className="glow-card group">
+                                <div className="glow-card-bg"></div>
+                                <div className="glow-card-content overflow-hidden">
+                                    <img src={project.image} alt={project.title} className="w-full h-[200px] object-cover border-b border-white/10" />
+                                    <div className="p-6">
+                                        <div className="flex justify-between items-center mb-4">
+                                            <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                                            <span className="text-[0.75rem] px-2 py-1 bg-white/10 rounded-full border border-white/10 text-white">{project.badge}</span>
                                         </div>
-                                        <div className="flex gap-4 text-[#9ca3af]">
-                                            <span>⭐ {project.stars}</span>
-                                            <span>🔗 {project.forks}</span>
+                                        <p className="text-[#9ca3af] text-sm mb-6 line-clamp-3">{project.description}</p>
+                                        <div className="flex justify-between items-center mb-6 text-[0.85rem]">
+                                            <div className="flex gap-2">
+                                                {project.tags.map(tag => (
+                                                    <span key={tag} className="before:content-['•'] before:text-[#3b82f6] before:mr-1 text-white">{tag}</span>
+                                                ))}
+                                            </div>
+                                            <div className="flex gap-4 text-[#9ca3af]">
+                                                <span>⭐ {project.stars}</span>
+                                                <span>🔗 {project.forks}</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="flex justify-between border-t border-white/10 pt-4">
-                                        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-white hover:text-[#22d3ee] transition-colors flex items-center gap-1 group/link">
-                                            Live Demo
-                                            <svg className="w-3.5 h-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                                        </a>
-                                        <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-white hover:text-[#22d3ee] transition-colors flex items-center gap-1 group/link">
-                                            Repository
-                                            <svg className="w-3.5 h-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                                        </a>
+                                        <div className="flex justify-between border-t border-white/10 pt-4">
+                                            <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-white hover:text-[#22d3ee] transition-colors flex items-center gap-1 group/link">
+                                                Live Demo
+                                                <svg className="w-3.5 h-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                            </a>
+                                            <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-white hover:text-[#22d3ee] transition-colors flex items-center gap-1 group/link">
+                                                Repository
+                                                <svg className="w-3.5 h-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
                 )}
                 {!isProjectsPage && (
                     <div className="text-center mt-12">

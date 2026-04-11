@@ -29,18 +29,16 @@ const Hero = () => {
                         Available for new projects
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-6 md:mb-8 tracking-tight text-white">
-                        <span className="text-3xl md:text-5xl lg:text-6xl block mb-2 text-gray-300 font-medium tracking-normal"> Hello I am</span>
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#c084fc] via-[#a855f7] to-[#8b5cf6]">Muhammad </span><br />
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#67e8f9] via-[#22d3ee] to-[#3b82f6]">Mudassar</span>
+                    <h1 className="text-5xl md:text-7xl lg:text-7xl font-bold leading-[1.1] mb-6 md:mb-8 tracking-tight text-white">
+                        <span className="text-3xl md:text-5xl lg:text-6xl block mb-2 text-gray-300 font-medium tracking-normal"> Hi, I'm</span>
+                        {/* <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#c084fc] via-[#a855f7] to-[#8b5cf6]">Muhammad </span><br /> */}
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22d3ee] to-[#a855f7]">Mudassar</span>
                     </h1>
 
                     <div className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 md:mb-8 h-[40px] md:h-[50px] flex items-center">
                         <TypeAnimation
                             sequence={[
-                                "MERN Stack Developer",
-                                1000,
-                                'Frontend Developer',
+                                "Full Stack Developer",
                                 1000,
                                 'Wordpress Developer',
                                 1000,
@@ -69,6 +67,17 @@ const Hero = () => {
                             My Skills
                         </Link>
                     </div>
+                            <div className="flex gap-4">
+                                {[
+                                    { icon: <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>, url: "https://github.com/mmudassar1" },
+                                    { icon: <><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></>, url: "https://linkedin.com/in/mmudassar001" },
+                                    // { icon: <path d="M23 4a2 2 0 0 0-1.44-1.44C20.29 2 12 2 12 2s-8.29 0-9.56.36A2 2 0 0 0 1 3.8C.64 5.07.64 7.7.64 7.7s0 2.63.36 3.9a2 2 0 0 0 1.44 1.44C3.71 13.4 12 13.4 12 13.4s8.29 0 9.56-.36a2 2 0 0 0 1.44-1.44c.36-1.27.36-3.9.36-3.9s0-2.63-.36-3.9z"></path>, url: "#" }
+                                ].map((social, i) => (
+                                    <a key={i} href={social.url} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-white/5 flex justify-center items-center text-white transition-all hover:bg-[#a855f7] hover:scale-110">
+                                        <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">{social.icon}</svg>
+                                    </a>
+                                ))}
+                            </div>
 
                     {/* <div className="flex items-center gap-4 text-sm text-gray-400">
                         <div className="flex -space-x-3">
