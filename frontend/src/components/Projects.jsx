@@ -11,7 +11,7 @@ const Projects = () => {
         {
             id: 1,
             image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80',
-            title: 'Cloth Shoping Website',
+            title: 'Full stack E-commerce Platform',
             badge: 'Public',
             description: 'A full-featured e-commerce platform with product categories and payment integration.',
             tags: ['React', 'Commerce'],
