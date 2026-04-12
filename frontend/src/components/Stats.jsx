@@ -50,7 +50,7 @@ const Stats = () => {
     return (
         <section className="py-24 max-w-[1400px] mx-auto px-6 md:px-10 flex flex-col lg:flex-row gap-12 lg:gap-20 items-center" id="stats">
             {/* Stats Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full lg:w-1/2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full lg:w-1/2" data-aos="fade-right">
                 {statsData.map((stat, i) => (
                     <div key={i} className="glow-card group h-full">
                         <div className="glow-card-bg"></div>
@@ -68,7 +68,7 @@ const Stats = () => {
             </div>
 
             {/* Code Block Focus */}
-            <div className="relative group w-full lg:w-1/2">
+            <div className="relative group w-full lg:w-1/2" data-aos="fade-left">
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#a855f7] to-[#22d3ee] rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
                 <div className="relative bg-[#020617] p-6 md:p-10 rounded-2xl font-mono text-xs md:text-sm lg:text-[15px] leading-relaxed border border-white/10 shadow-2xl overflow-x-auto">
                     <pre className="text-gray-300 min-w-fit">

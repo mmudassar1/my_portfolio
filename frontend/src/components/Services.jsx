@@ -47,7 +47,7 @@ const Services = () => {
             ></div>
 
             <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
-                <div className="text-center mb-16 md:mb-24 relative">
+                <div className="text-center mb-16 md:mb-24 relative" data-aos="fade-up">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                         Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#c084fc] via-[#a855f7] to-[#22d3ee]">Services</span>
                     </h2>
@@ -58,7 +58,7 @@ const Services = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {services.map((service, index) => (
-                        <div key={index} className="glow-card group">
+                        <div key={index} className="glow-card group" data-aos="fade-up" data-aos-delay={index * 100}>
                             <div className="glow-card-bg"></div>
                             <div className="glow-card-content p-8 md:p-10 flex flex-col items-start transition-all duration-300">
                                 <div className="p-3 rounded-xl bg-[#22d3ee]/10 text-[#22d3ee] mb-6 group-hover:bg-[#22d3ee] group-hover:text-white transition-all duration-500">

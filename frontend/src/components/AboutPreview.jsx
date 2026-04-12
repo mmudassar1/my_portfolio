@@ -15,8 +15,8 @@ const AboutPreview = () => {
 
                             <h3 className="font-mono text-xl mb-4 text-white">Work History</h3>
                             <div className="mb-4">
-                                <h4 className="text-sm mb-1 text-white font-medium"><span className="text-[#22d3ee]">MERN Stack Trainee, PNY Trainings</span> (2025)</h4>
-                                <p className="text-[#9ca3af] text-[0.85rem] leading-[1.5] mb-3">Intensive MERN stack training at Arfa Tower. Proficient in JavaScript, React, Node.js, and MongoDB.</p>
+                                <h4 className="text-sm mb-1 text-white font-medium"><span className="text-[#22d3ee]">AI & Modern Technologies</span> (2025-Present)</h4>
+                                <p className="text-[#9ca3af] text-[0.85rem] leading-[1.5] mb-3">Working with modern technologies and AI, gaining hands-on experience and applying them to build practical, real-world applications.</p>
                             </div>
                             <div className="mb-4">
                                 <h4 className="text-sm mb-1 text-white font-medium"><span className="text-[#22d3ee]">Developer, Digigitz Software House</span> (2023-2025)</h4>

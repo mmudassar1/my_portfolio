@@ -19,8 +19,8 @@ const Hero = () => {
             <div className="absolute top-[10%] left-[5%] w-[300px] md:w-[400px] h-[300px] md:h-[400px] bg-[#a855f7]/10 rounded-full blur-[100px] md:blur-[120px] pointer-events-none"></div>
             <div className="absolute bottom-[10%] right-[5%] w-[400px] md:w-[500px] h-[400px] md:h-[500px] bg-[#22d3ee]/5 rounded-full blur-[120px] md:blur-[150px] pointer-events-none"></div>
 
-            <div className="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center relative z-10">
-                <div className="hero-content text-left order-2 lg:order-1">
+            <div className="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-40 items-center relative z-10">
+                <div className="hero-content text-left order-2 lg:order-1" data-aos="fade-right">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1e1b4b]/50 border border-white/10 text-[#a855f7] text-sm font-semibold mb-6 md:mb-8 animate-fade-in backdrop-blur-md">
                         <span className="relative flex h-3 w-3">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#a855f7] opacity-75"></span>
@@ -30,9 +30,9 @@ const Hero = () => {
                     </div>
 
                     <h1 className="text-5xl md:text-7xl lg:text-7xl font-bold leading-[1.1] mb-6 md:mb-8 tracking-tight text-white">
-                        <span className="text-3xl md:text-5xl lg:text-6xl block mb-2 text-gray-300 font-medium tracking-normal"> Hi, I'm</span>
+                        <span className="text-3xl md:text-5xl lg:text-6xl block mb-2 text-gray-300 font-poppins font-bold tracking-normal"> Hi, I'm <span className="text-transparent font-poppins bg-clip-text bg-gradient-to-r from-[#22d3ee] to-[#a855f7]">Mudassar</span></span>
                         {/* <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#c084fc] via-[#a855f7] to-[#8b5cf6]">Muhammad </span><br /> */}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22d3ee] to-[#a855f7]">Mudassar</span>
+                        {/* <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22d3ee] to-[#a855f7]">Mudassar</span> */}
                     </h1>
 
                     <div className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 md:mb-8 h-[40px] md:h-[50px] flex items-center">
@@ -40,11 +40,13 @@ const Hero = () => {
                             sequence={[
                                 "Full Stack Developer",
                                 1000,
-                                'Wordpress Developer',
+                                "MERN Stack Expert",
                                 1000,
-                                'UI/UX Designer',
+                                "React.js & Next.js Developer",
                                 1000,
-                                'Creative Thinker',
+                                "Node.js & Backend Developer",
+                                1000,
+                                "UI/UX & Frontend Developer",
                                 1000,
                             ]}
                             wrapper="span"
@@ -67,17 +69,17 @@ const Hero = () => {
                             My Skills
                         </Link>
                     </div>
-                            <div className="flex gap-4">
-                                {[
-                                    { icon: <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>, url: "https://github.com/mmudassar1" },
-                                    { icon: <><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></>, url: "https://linkedin.com/in/mmudassar001" },
-                                    // { icon: <path d="M23 4a2 2 0 0 0-1.44-1.44C20.29 2 12 2 12 2s-8.29 0-9.56.36A2 2 0 0 0 1 3.8C.64 5.07.64 7.7.64 7.7s0 2.63.36 3.9a2 2 0 0 0 1.44 1.44C3.71 13.4 12 13.4 12 13.4s8.29 0 9.56-.36a2 2 0 0 0 1.44-1.44c.36-1.27.36-3.9.36-3.9s0-2.63-.36-3.9z"></path>, url: "#" }
-                                ].map((social, i) => (
-                                    <a key={i} href={social.url} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-white/5 flex justify-center items-center text-white transition-all hover:bg-[#a855f7] hover:scale-110">
-                                        <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">{social.icon}</svg>
-                                    </a>
-                                ))}
-                            </div>
+                    <div className="flex gap-4">
+                        {[
+                            { icon: <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>, url: "https://github.com/mmudassar1" },
+                            { icon: <><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></>, url: "https://linkedin.com/in/mmudassar001" },
+                            // { icon: <path d="M23 4a2 2 0 0 0-1.44-1.44C20.29 2 12 2 12 2s-8.29 0-9.56.36A2 2 0 0 0 1 3.8C.64 5.07.64 7.7.64 7.7s0 2.63.36 3.9a2 2 0 0 0 1.44 1.44C3.71 13.4 12 13.4 12 13.4s8.29 0 9.56-.36a2 2 0 0 0 1.44-1.44c.36-1.27.36-3.9.36-3.9s0-2.63-.36-3.9z"></path>, url: "#" }
+                        ].map((social, i) => (
+                            <a key={i} href={social.url} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-white/5 flex justify-center items-center text-white transition-all hover:bg-[#a855f7] hover:scale-110">
+                                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">{social.icon}</svg>
+                            </a>
+                        ))}
+                    </div>
 
                     {/* <div className="flex items-center gap-4 text-sm text-gray-400">
                         <div className="flex -space-x-3">
@@ -92,7 +94,7 @@ const Hero = () => {
                 </div>
 
                 {/* Profile Section Responsive */}
-                <div className="relative flex justify-center items-center order-1 lg:order-2">
+                <div className="relative flex justify-center pl-30 items-center order-1 lg:order-2" data-aos="fade-left">
                     <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[450px] md:h-[450px] flex justify-center items-center">
 
                         {/* Outer Glow Ring */}

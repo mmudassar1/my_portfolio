@@ -14,7 +14,7 @@ const Contact = () => {
     return (
         <section className="py-24 bg-[#0a0624]" id="contact">
             <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-                <div className="text-center mb-16 px-4">
+                <div className="text-center mb-16 px-4" data-aos="fade-up">
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                         Connect With Me <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#67e8f9] via-[#22d3ee] to-[#06b6d4]">Today</span>
                     </h2>
@@ -24,7 +24,7 @@ const Contact = () => {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-                    <div className="contact-info order-2 lg:order-1">
+                    <div className="contact-info order-2 lg:order-1" data-aos="fade-right">
                         <div className="bg-white/5 p-8 rounded-2xl border border-white/5 h-full">
                             <h3 className="text-2xl font-bold mb-8 text-white font-mono flex items-center gap-3">
                                 <span className="w-8 h-[2px] bg-[#22d3ee]"></span>
@@ -68,7 +68,7 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div className="glow-card group order-1 lg:order-2">
+                    <div className="glow-card group order-1 lg:order-2" data-aos="fade-left">
                         <div className="glow-card-bg opacity-40"></div>
                         <div className="glow-card-content p-8 md:p-10 min-h-[450px] flex flex-col justify-center">
                             {!showSuccess ? (

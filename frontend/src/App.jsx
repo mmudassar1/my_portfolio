@@ -17,6 +17,9 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
 import BlogPost from './components/BlogPost';
 import { useLocation } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Home = () => (
   <>
@@ -41,6 +44,15 @@ const PageWrapper = ({ children }) => (
 function AppContent() {
   const location = useLocation();
   const hideCTA = location.pathname === '/' || location.pathname === '/contact';
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true,
+    });
+    AOS.refresh();
+  }, [location.pathname]);
 
   return (
     <div className="app-wrapper">

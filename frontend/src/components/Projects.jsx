@@ -150,7 +150,7 @@ const Projects = () => {
     return (
         <section className="py-20 bg-[#0F0921]" id="projects">
             <div className="max-w-[1400px] mx-auto px-8">
-                <h2 className="text-4xl text-center mb-12 font-bold text-white">
+                <h2 className="text-4xl text-center mb-12 font-bold text-white" data-aos="fade-up">
                     {isProjectsPage ? 'All ' : 'Featured '}
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#67e8f9] via-[#22d3ee] to-[#06b6d4]">Repositories</span>
                 </h2>
@@ -160,8 +160,8 @@ const Projects = () => {
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {displayProjects.map(project => (
-                            <div key={project.id} className="glow-card group">
+                        {displayProjects.map((project, index) => (
+                            <div key={project.id} className="glow-card group" data-aos="fade-up" data-aos-delay={index * 100}>
                                 <div className="glow-card-bg"></div>
                                 <div className="glow-card-content overflow-hidden">
                                     <img src={project.image} alt={project.title} className="w-full h-[200px] object-cover border-b border-white/10" />
