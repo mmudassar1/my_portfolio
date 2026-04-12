@@ -5,8 +5,8 @@ const AboutPreview = () => {
     return (
         <section className="py-20 px-8 bg-[#0F0921]" id="about">
             <div className="max-w-[1400px] mx-auto px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 items-stretch">
-                    <div className="about-preview-content flex flex-col justify-between">
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-16 items-stretch">
+                    <div className="about-preview-content flex flex-col justify-between order-2 lg:order-1">
                         <div>
                             <h2 className="font-mono text-4xl font-bold mb-2 text-white">Muhammad Mudassar</h2>
                             <p className="text-[#9ca3af] text-sm mb-8 leading-relaxed">
@@ -46,13 +46,13 @@ const AboutPreview = () => {
 
                         <Link
                             to="/about"
-                            className="inline-block bg-white/5 border border-white/10 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all font-medium text-center"
+                            className="inline-block bg-white/5 border border-white/10 text-white px-6 py-3 md:px-8 md:py-3 rounded-lg hover:bg-white/10 transition-all font-medium text-center text-sm md:text-base"
                         >
                             Learn More About Me
                         </Link>
                     </div>
-                    <div className="border border-[#22d3ee]/40 rounded-lg p-4 flex justify-center items-center h-full">
-                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/web-development-3454628-2918517.png" alt="Developer Illustration" className="w-full h-full rounded-lg object-cover" />
+                    <div className="border border-[#22d3ee]/40 rounded-lg p-4 flex justify-center items-center h-full order-1 lg:order-2 mb-8 lg:mb-0">
+                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/web-development-3454628-2918517.png" alt="Developer Illustration" className="w-full max-h-[250px] lg:max-h-full rounded-lg object-contain" />
                     </div>
                 </div>
             </div>

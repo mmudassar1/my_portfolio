@@ -202,7 +202,7 @@ const Projects = () => {
                     <div className="text-center mt-12">
                         <Link
                             to="/projects"
-                            className="inline-block bg-gradient-to-r from-[#a855f7] via-[#8b5cf6] to-[#3b82f6] text-white px-8 py-4 font-bold rounded-xl hover:opacity-90 hover:-translate-y-1 transition-all shadow-lg hover:shadow-[#a855f7]/40"
+                            className="inline-block bg-gradient-to-r from-[#a855f7] via-[#8b5cf6] to-[#3b82f6] text-white px-6 py-3 md:px-8 md:py-4 font-bold rounded-xl hover:opacity-90 hover:-translate-y-1 transition-all shadow-lg hover:shadow-[#a855f7]/40 text-sm md:text-base"
                         >
                             See All Projects
                         </Link>

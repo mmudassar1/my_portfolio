@@ -8,7 +8,7 @@ const Pricing = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[800px] mx-auto">
                     <div className="glow-card group">
                         <div className="glow-card-bg"></div>
-                        <div className="glow-card-content p-12 px-8 text-center">
+                        <div className="glow-card-content p-8 md:p-12 text-center">
                             <h3 className="text-2xl font-bold mb-4 text-white">Basic Plan</h3>
                             <div className="text-4xl font-bold mb-4 font-mono text-white"><span className="bg-clip-text text-transparent bg-gradient-to-r from-[#67e8f9] via-[#22d3ee] to-[#06b6d4]">99$</span>/month</div>
                             <p className="text-[#9ca3af] mb-8">Perfect for startups and small businesses looking to establish an online presence.</p>
@@ -21,9 +21,9 @@ const Pricing = () => {
                             <button className="w-full bg-transparent border border-[#22d3ee]/50 text-white px-6 py-3 font-medium rounded-lg hover:bg-[#22d3ee]/5 transition-all">Choose Plan</button>
                         </div>
                     </div>
-                    <div className="glow-card group scale-[1.05] z-10">
+                    <div className="glow-card group md:scale-[1.05] z-10">
                         <div className="glow-card-bg opacity-40"></div>
-                        <div className="glow-card-content p-12 px-8 text-center relative overflow-hidden">
+                        <div className="glow-card-content p-8 md:p-12 text-center relative overflow-hidden">
                             <div className="absolute top-6 right-[-2rem] bg-[#a855f7] text-white px-12 py-1 rotate-45 text-[0.8rem] font-bold">Most Popular</div>
                             <h3 className="text-2xl font-bold mb-4 text-white">Pro Plan</h3>
                             <div className="text-4xl font-bold mb-4 font-mono text-white"><span className="bg-clip-text text-transparent bg-gradient-to-r from-[#c084fc] via-[#a855f7] to-[#9333ea]">299$</span>/month</div>

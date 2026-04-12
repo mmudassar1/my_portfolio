@@ -81,7 +81,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="relative border-l-2 border-[#22d3ee]/20 ml-2 md:ml-4 space-y-10 md:space-y-12 py-8" data-aos="fade-up">
+            <div className="relative border-l-2 border-[#22d3ee]/20 ml-4 md:ml-6 space-y-10 md:space-y-12 py-8" data-aos="fade-up">
                 {[
                     { title: "AI & Modern Technologies", date: "Apr 2025 - Present", desc: "Working with modern technologies and AI, gaining hands-on experience and applying them to build practical, real-world applications. " },
                     { title: "Full Stack Developer, Digigitz Software House", date: "Jul 2023 - Mar 2025", desc: "Contributed to the development of complex web applications using the MERN stack. Focused on optimizing database performance, implementing secure authentication systems, and creating responsive user interfaces." },

@@ -37,7 +37,7 @@ const CTA = () => {
                         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                             <Link
                                 to="/contact"
-                                className="group/btn relative px-10 py-5 bg-white text-black font-bold rounded-2xl transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.3)] flex items-center gap-2 overflow-hidden"
+                                className="group/btn relative px-8 py-4 md:px-10 md:py-5 bg-white text-black font-bold rounded-2xl transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.3)] flex items-center gap-2 overflow-hidden text-sm md:text-base"
                             >
                                 <span className="relative z-10 font-bold">Start a Conversation</span>
                                 <svg className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">

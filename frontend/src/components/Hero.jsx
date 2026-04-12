@@ -29,13 +29,11 @@ const Hero = () => {
                         Available for new projects
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl lg:text-7xl font-bold leading-[1.1] mb-6 md:mb-8 tracking-tight text-white">
-                        <span className="text-3xl md:text-5xl lg:text-6xl block mb-2 text-gray-300 font-poppins font-bold tracking-normal"> Hi, I'm <span className="text-transparent font-poppins bg-clip-text bg-gradient-to-r from-[#22d3ee] to-[#a855f7]">Mudassar</span></span>
-                        {/* <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#c084fc] via-[#a855f7] to-[#8b5cf6]">Muhammad </span><br /> */}
-                        {/* <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22d3ee] to-[#a855f7]">Mudassar</span> */}
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-7xl font-bold leading-[1.1] mb-6 md:mb-8 tracking-tight text-white">
+                        <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl block mb-2 text-gray-300 font-poppins font-bold tracking-normal"> Hi, I'm <span className="text-transparent font-poppins bg-clip-text bg-gradient-to-r from-[#22d3ee] to-[#a855f7]">Mudassar</span></span>
                     </h1>
 
-                    <div className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 md:mb-8 h-[40px] md:h-[50px] flex items-center">
+                    <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 md:mb-8 h-[50px] sm:h-[40px] md:h-[50px] flex items-center">
                         <TypeAnimation
                             sequence={[
                                 "Full Stack Developer",
@@ -61,11 +59,11 @@ const Hero = () => {
                         <span className="text-white font-medium"> scalable</span> solutions that drive meaningful user experiences.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                        <Link to="/projects" className="px-8 py-4 bg-[#a855f7] text-white font-bold rounded-xl hover:scale-105 transition-all shadow-lg shadow-[#a855f7]/25 hover:shadow-[#a855f7]/40 flex items-center justify-center gap-2 group">
+                        <Link to="/projects" className="px-6 py-3 md:px-8 md:py-4 bg-[#a855f7] text-white font-bold rounded-xl hover:scale-105 transition-all shadow-lg shadow-[#a855f7]/25 hover:shadow-[#a855f7]/40 flex items-center justify-center gap-2 group text-sm md:text-base">
                             View Projects
                             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </Link>
-                        <Link to="/about" className="px-8 py-4 bg-transparent border-2 border-white/10 text-white font-bold rounded-xl hover:bg-white/5 transition-all backdrop-blur-sm flex items-center justify-center">
+                        <Link to="/about" className="px-6 py-3 md:px-8 md:py-4 bg-transparent border-2 border-white/10 text-white font-bold rounded-xl hover:bg-white/5 transition-all backdrop-blur-sm flex items-center justify-center text-sm md:text-base">
                             My Skills
                         </Link>
                     </div>
@@ -94,17 +92,17 @@ const Hero = () => {
                 </div>
 
                 {/* Profile Section Responsive */}
-                <div className="relative flex justify-center pl-30 items-center order-1 lg:order-2" data-aos="fade-left">
-                    <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[450px] md:h-[450px] flex justify-center items-center">
+                <div className="relative flex justify-center items-center order-1 lg:order-2" data-aos="fade-left">
+                    <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px] flex justify-center items-center">
 
                         {/* Outer Glow Ring */}
                         <div className="absolute inset-0 rounded-full border border-[#22d3ee]/20 shadow-[0_0_40px_rgba(34,211,238,0.1)] md:shadow-[0_0_80px_rgba(34,211,238,0.1)]"></div>
 
                         {/* Rotating Text Ring Track */}
-                        <div className="absolute w-[260px] h-[260px] sm:w-[360px] sm:h-[360px] md:w-[420px] md:h-[420px] rounded-full bg-[#030014] border-2 md:border-4 border-[#22d3ee] shadow-[0_0_20px_rgba(34,211,238,0.3)] md:shadow-[0_0_30px_rgba(34,211,238,0.3)]"></div>
+                        <div className="absolute w-[200px] h-[200px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] rounded-full bg-[#030014] border-2 md:border-4 border-[#22d3ee] shadow-[0_0_20px_rgba(34,211,238,0.3)] md:shadow-[0_0_30px_rgba(34,211,238,0.3)]"></div>
 
                         {/* Rotating Text */}
-                        <svg viewBox="0 0 200 200" className="absolute w-[270px] h-[270px] sm:w-[370px] sm:h-[370px] md:w-[440px] md:h-[440px] animate-[spin_30s_linear_infinite] z-20 pointer-events-none overflow-visible">
+                        <svg viewBox="0 0 200 200" className="absolute w-[210px] h-[210px] sm:w-[330px] sm:h-[330px] md:w-[440px] md:h-[440px] animate-[spin_30s_linear_infinite] z-20 pointer-events-none overflow-visible">
                             <path id="circlePath" d="M 100, 100 m -82, 0 a 82,82 0 1,1 164,0 a 82,82 0 1,1 -164,0" fill="transparent" />
                             <text className="text-[10px] sm:text-[11px] md:text-[12.5px] font-bold uppercase tracking-[0.2em] sm:tracking-[0.3em]" fill="#f3f4f6" dominantBaseline="middle">
                                 <textPath href="#circlePath" startOffset="0%">
@@ -115,7 +113,7 @@ const Hero = () => {
                         </svg>
 
                         {/* Inner Profile Circle */}
-                        <div className="relative w-[180px] h-[180px] sm:w-[260px] sm:h-[260px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden border-2 md:border-4 border-[#a855f7] shadow-[0_0_30px_rgba(168,85,247,0.4)] md:shadow-[0_0_50px_rgba(168,85,247,0.4)] z-30 group">
+                        <div className="relative w-[140px] h-[140px] sm:w-[220px] sm:h-[220px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden border-2 md:border-4 border-[#a855f7] shadow-[0_0_30px_rgba(168,85,247,0.4)] md:shadow-[0_0_50px_rgba(168,85,247,0.4)] z-30 group">
                             <img
                                 src="/pic1.png"
                                 alt="Developer Avatar"

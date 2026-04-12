@@ -40,6 +40,19 @@
   .glow-card-content {
     @apply relative h-full bg-[#020617]/90 backdrop-blur-sm rounded-2xl border border-white/10 shadow-2xl transition-all duration-500 group-hover:-translate-y-2 flex flex-col;
   }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-white/5;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-[#a855f7]/30 rounded-full hover:bg-[#a855f7]/50 transition-colors;
+  }
 }
 
 @keyframes float {
