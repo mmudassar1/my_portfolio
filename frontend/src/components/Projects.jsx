@@ -148,8 +148,8 @@ const Projects = () => {
     const displayProjects = isProjectsPage ? githubRepos : featuredProjects;
 
     return (
-        <section className="py-20 bg-[#0F0921]" id="projects">
-            <div className="max-w-[1400px] mx-auto px-8">
+        <section className="py-20 bg-[#0F0921] overflow-hidden" id="projects">
+            <div className="max-w-[1400px] mx-auto px-6 md:px-8">
                 <h2 className="text-4xl text-center mb-12 font-bold text-white" data-aos="fade-up">
                     {isProjectsPage ? 'All ' : 'Featured '}
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#67e8f9] via-[#22d3ee] to-[#06b6d4]">Repositories</span>

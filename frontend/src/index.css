@@ -3,6 +3,10 @@
 @config "../tailwind.config.js";
 
 @layer base {
+  html, body {
+    @apply overflow-x-hidden w-full;
+  }
+
   html {
     font-size: 100%;
     @apply md:text-[110%] scroll-smooth;

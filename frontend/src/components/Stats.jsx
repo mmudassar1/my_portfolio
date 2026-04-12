@@ -68,9 +68,9 @@ const Stats = () => {
             </div>
 
             {/* Code Block Focus */}
-            <div className="relative group w-full lg:w-1/2" data-aos="fade-left">
+            <div className="relative group w-full lg:w-1/2 overflow-hidden" data-aos="fade-left">
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#a855f7] to-[#22d3ee] rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-                <div className="relative bg-[#020617] p-4 sm:p-6 md:p-10 rounded-2xl font-mono text-[10px] sm:text-xs md:text-sm lg:text-[15px] leading-relaxed border border-white/10 shadow-2xl overflow-x-auto custom-scrollbar">
+                <div className="relative bg-[#020617] p-4 sm:p-6 md:p-10 rounded-2xl font-mono text-[9px] sm:text-xs md:text-sm lg:text-[15px] leading-relaxed border border-white/10 shadow-2xl overflow-x-auto custom-scrollbar">
                     <pre className="text-gray-300 min-w-fit">
                         <code>
                             <span className="text-[#c678dd]">class</span> <span className="text-[#e5c07b]">MuhammadMudassar</span> {'{\n'}

@@ -30,9 +30,9 @@ export const blogData = [
 
 const Blogs = () => {
     return (
-        <section className="py-20 max-w-[1400px] mx-auto px-8" id="blogs">
+        <section className="py-20 max-w-[1400px] mx-auto px-6 md:px-8 overflow-hidden" id="blogs">
             <h2 className="text-4xl text-center mb-12 font-bold text-white">Latest <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#67e8f9] via-[#22d3ee] to-[#06b6d4]">Articles</span></h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full">
                 {blogData.map(blog => (
                     <Link to={`/blog/${blog.id}`} key={blog.id} className="glow-card group block">
                         <div className="glow-card-bg"></div>

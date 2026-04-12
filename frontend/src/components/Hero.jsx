@@ -92,17 +92,17 @@ const Hero = () => {
                 </div>
 
                 {/* Profile Section Responsive */}
-                <div className="relative flex justify-center items-center order-1 lg:order-2" data-aos="fade-left">
-                    <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px] flex justify-center items-center">
+                <div className="relative flex justify-center items-center order-1 lg:order-2 w-full overflow-hidden py-8" data-aos="fade-left">
+                    <div className="relative w-[250px] h-[250px] sm:w-[320px] sm:h-[320px] md:w-[450px] md:h-[450px] flex justify-center items-center max-w-full">
 
                         {/* Outer Glow Ring */}
                         <div className="absolute inset-0 rounded-full border border-[#22d3ee]/20 shadow-[0_0_40px_rgba(34,211,238,0.1)] md:shadow-[0_0_80px_rgba(34,211,238,0.1)]"></div>
 
                         {/* Rotating Text Ring Track */}
-                        <div className="absolute w-[200px] h-[200px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] rounded-full bg-[#030014] border-2 md:border-4 border-[#22d3ee] shadow-[0_0_20px_rgba(34,211,238,0.3)] md:shadow-[0_0_30px_rgba(34,211,238,0.3)]"></div>
+                        <div className="absolute w-[180px] h-[180px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] rounded-full bg-[#030014] border-2 md:border-4 border-[#22d3ee] shadow-[0_0_20px_rgba(34,211,238,0.3)] md:shadow-[0_0_30px_rgba(34,211,238,0.3)]"></div>
 
                         {/* Rotating Text */}
-                        <svg viewBox="0 0 200 200" className="absolute w-[210px] h-[210px] sm:w-[330px] sm:h-[330px] md:w-[440px] md:h-[440px] animate-[spin_30s_linear_infinite] z-20 pointer-events-none overflow-visible">
+                        <svg viewBox="0 0 200 200" className="absolute w-[190px] h-[190px] sm:w-[330px] sm:h-[330px] md:w-[440px] md:h-[440px] animate-[spin_30s_linear_infinite] z-20 pointer-events-none overflow-visible">
                             <path id="circlePath" d="M 100, 100 m -82, 0 a 82,82 0 1,1 164,0 a 82,82 0 1,1 -164,0" fill="transparent" />
                             <text className="text-[10px] sm:text-[11px] md:text-[12.5px] font-bold uppercase tracking-[0.2em] sm:tracking-[0.3em]" fill="#f3f4f6" dominantBaseline="middle">
                                 <textPath href="#circlePath" startOffset="0%">
@@ -113,7 +113,7 @@ const Hero = () => {
                         </svg>
 
                         {/* Inner Profile Circle */}
-                        <div className="relative w-[140px] h-[140px] sm:w-[220px] sm:h-[220px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden border-2 md:border-4 border-[#a855f7] shadow-[0_0_30px_rgba(168,85,247,0.4)] md:shadow-[0_0_50px_rgba(168,85,247,0.4)] z-30 group">
+                        <div className="relative w-[130px] h-[130px] sm:w-[220px] sm:h-[220px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden border-2 md:border-4 border-[#a855f7] shadow-[0_0_30px_rgba(168,85,247,0.4)] md:shadow-[0_0_50px_rgba(168,85,247,0.4)] z-30 group">
                             <img
                                 src="/pic1.png"
                                 alt="Developer Avatar"
