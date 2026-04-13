@@ -5,23 +5,26 @@ const AboutPreview = () => {
     return (
         <section className="py-20 px-8 bg-[#0F0921]" id="about">
             <div className="max-w-[1400px] mx-auto px-8">
+                <div className=" mb-15 md:mb-24 relative" data-aos="fade-up">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3">
+                        <h2 className="text-6xl text-center font-bold text-white">About <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#c084fc] via-[#a855f7] to-[#9333ea]">Me</span></h2>
+                    </h2>
+                    <p className="text-[#9ca3af] text-md max-w-[850px] mx-auto leading-relaxed px-4">
+                        A passionate Full Stack Developer with 4+ years of experience in creating modern web solutions and solving complex technical challenges.
+                    </p>
+                </div>
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-16 items-stretch">
                     <div className="about-preview-content flex flex-col justify-between order-2 lg:order-1">
                         <div>
-                            <h2 className="font-mono text-4xl font-bold mb-2 text-white">Muhammad Mudassar</h2>
                             <p className="text-[#9ca3af] text-sm mb-8 leading-relaxed">
-                                Full Stack Developer with 2 years of professional experience at Digigitz Software House. Specialized in the MERN stack with a passion for building scalable and efficient web solutions.
-                            </p>
+                                I started my journey in web development with a strong curiosity for how things work behind the screen. Over the past 4+ years, that curiosity has evolved into real-world experience building modern, scalable web applications.<br /><br />
 
-                            <h3 className="font-mono text-xl mb-4 text-white">Work History</h3>
-                            <div className="mb-4">
-                                <h4 className="text-sm mb-1 text-white font-medium"><span className="text-[#22d3ee]">AI & Modern Technologies</span> (2025-Present)</h4>
-                                <p className="text-[#9ca3af] text-[0.85rem] leading-[1.5] mb-3">Working with modern technologies and AI, gaining hands-on experience and applying them to build practical, real-world applications.</p>
-                            </div>
-                            <div className="mb-4">
-                                <h4 className="text-sm mb-1 text-white font-medium"><span className="text-[#22d3ee]">Developer, Digigitz Software House</span> (2023-2025)</h4>
-                                <p className="text-[#9ca3af] text-[0.85rem] leading-[1.5] mb-3">Professional experience in full-stack development, focusing on MERN stack architectures and performant web applications.</p>
-                            </div>
+                                Along the way, I’ve had the opportunity to work professionally for 2 years at Digigitz Software House, where I contributed to multiple real-world projects. From developing eCommerce platforms to building SaaS-based applications, each project helped me grow as a problem solver and a developer.<br /><br />
+
+                                I specialize in the MERN stack — working with React, Node.js, and MongoDB to create fast, efficient, and user-friendly applications. I enjoy turning ideas into functional products and writing clean, maintainable code that delivers real value.<br /><br />
+
+                                Today, with 10+ completed projects, I continue to focus on building scalable solutions while constantly learning and improving my craft.
+                            </p>
 
                             <h3 className="font-mono text-xl mb-4 text-white">My Skills</h3>
                             <div className="flex flex-col gap-5 mb-8">

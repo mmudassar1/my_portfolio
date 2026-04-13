@@ -50,34 +50,39 @@ const BlogPost = () => {
                         {blog.excerpt}
                     </p>
                     
-                    <p className="mb-6 leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    </p>
-
-                    <h2 className="text-3xl font-bold text-white mt-12 mb-6">Introduction to the Architecture</h2>
-                    <p className="mb-6 leading-relaxed">
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-
-                    <h2 className="text-3xl font-bold text-white mt-12 mb-6">Implementation Details</h2>
-                    <p className="mb-6 leading-relaxed">
-                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
-                    </p>
-
-                    <div className="bg-[#020617] p-6 rounded-xl border border-white/10 my-10 shadow-xl overflow-x-auto relative group">
-                         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#a855f7] to-[#22d3ee]"></div>
-                         <pre className="m-0 text-[#22d3ee] text-sm md:text-base font-mono">
-{`// Example Implementation
-const optimizeQuery = async () => {
-    return await db.collection.find().lean();
-};`}
-                        </pre>
-                    </div>
-
-                    <h2 className="text-3xl font-bold text-white mt-12 mb-6">Conclusion</h2>
-                    <p className="mb-6 leading-relaxed">
-                        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae.
-                    </p>
+                    {blog.content ? (
+                        blog.content.map((section, index) => {
+                            if (section.type === 'paragraph') {
+                                return <p key={index} className="mb-6 leading-relaxed text-gray-300">{section.text}</p>;
+                            }
+                            if (section.type === 'heading') {
+                                return <h2 key={index} className="text-3xl font-bold text-white mt-12 mb-6">{section.text}</h2>;
+                            }
+                            if (section.type === 'code') {
+                                return (
+                                    <div key={index} className="bg-[#020617] p-6 rounded-xl border border-white/10 my-10 shadow-xl overflow-x-auto relative group">
+                                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#a855f7] to-[#22d3ee]"></div>
+                                        <div className="flex justify-between items-center mb-4">
+                                            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest">Code Block</span>
+                                            <button 
+                                                onClick={() => navigator.clipboard.writeText(section.code)}
+                                                className="text-xs text-[#22d3ee] hover:text-white transition-colors flex items-center gap-1"
+                                            >
+                                                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                                                Copy
+                                            </button>
+                                        </div>
+                                        <pre className="m-0 text-[#22d3ee] text-sm md:text-base font-mono leading-relaxed">
+                                            {section.code}
+                                        </pre>
+                                    </div>
+                                );
+                            }
+                            return null;
+                        })
+                    ) : (
+                        <p className="text-gray-400">Content is being updated...</p>
+                    )}
                 </div>
             </div>
         </article>

@@ -49,7 +49,7 @@ const Services = () => {
             <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
                 <div className="text-center mb-16 md:mb-24 relative" data-aos="fade-up">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                        Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#c084fc] via-[#a855f7] to-[#22d3ee]">Services</span>
+                        What I <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#c084fc] via-[#a855f7] to-[#22d3ee]">Do</span>
                     </h2>
                     <p className="text-[#9ca3af] text-lg max-w-[850px] mx-auto leading-relaxed px-4">
                         As a Full Stack Developer, I offer end-to-end solutions to build scalable, user-focused web applications using modern technologies like React, Node.js, AWS, and more.
