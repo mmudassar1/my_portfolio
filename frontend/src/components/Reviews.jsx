@@ -45,7 +45,7 @@ const Reviews = () => {
                         <div className="glow-card-bg"></div>
                         <div className="glow-card-content p-8">
                             <div className="flex items-center gap-4">
-                                <img src={review.avatar} alt={review.name} className="w-[50px] h-[50px] rounded-full bg-[#0d0c22] border-2 border-white/10" />
+                                <img src={review.avatar} alt={review.name} loading="eager" className="w-[50px] h-[50px] rounded-full bg-[#0d0c22] border-2 border-white/10" />
                                 <div>
                                     <h4 className="text-white font-bold">{review.name}</h4>
                                     <p className="text-[#9ca3af] text-[0.85rem]">{review.company}</p>

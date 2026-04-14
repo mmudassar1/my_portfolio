@@ -155,7 +155,7 @@ const Blogs = () => {
                     <Link to={`/blog/${blog.id}`} key={blog.id} className="glow-card group block">
                         <div className="glow-card-bg"></div>
                         <div className="glow-card-content overflow-hidden">
-                            <img src={blog.image} alt={blog.title} className="w-full h-[200px] object-cover border-b border-white/10" />
+                            <img src={blog.image} alt={blog.title} loading="eager" className="w-full h-[200px] object-cover border-b border-white/10" />
                             <div className="p-6">
                                 <div className="flex gap-4 text-[#9ca3af] text-[0.85rem] mb-2">
                                     <span>📅 {blog.date}</span>

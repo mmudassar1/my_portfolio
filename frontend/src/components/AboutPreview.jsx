@@ -6,10 +6,10 @@ const AboutPreview = () => {
         <section className="py-20 px-8 bg-[#0F0921]" id="about">
             <div className="max-w-[1400px] mx-auto px-8">
                 <div className=" mb-15 md:mb-24 relative" data-aos="fade-up">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3">
-                        <h2 className="text-6xl text-center font-bold text-white">About <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#c084fc] via-[#a855f7] to-[#9333ea]">Me</span></h2>
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 text-center">
+                        <span className="text-6xl text-center font-bold text-white">About <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#c084fc] via-[#a855f7] to-[#9333ea]">Me</span></span>
                     </h2>
-                    <p className="text-[#9ca3af] text-md max-w-[850px] mx-auto leading-relaxed px-4">
+                    <p className="text-[#9ca3af] text-md max-w-[850px] mx-auto leading-relaxed text-center px-4">
                         A passionate Full Stack Developer with 4+ years of experience in creating modern web solutions and solving complex technical challenges.
                     </p>
                 </div>
@@ -55,7 +55,7 @@ const AboutPreview = () => {
                         </Link>
                     </div>
                     <div className="border border-[#22d3ee]/40 rounded-lg p-4 flex justify-center items-center h-full order-1 lg:order-2 mb-8 lg:mb-0">
-                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/web-development-3454628-2918517.png" alt="Developer Illustration" className="w-full max-h-[250px] lg:max-h-full rounded-lg object-contain" />
+                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/web-development-3454628-2918517.png" alt="Developer Illustration" loading="eager" className="w-full max-h-[250px] lg:max-h-full rounded-lg object-contain" />
                     </div>
                 </div>
             </div>

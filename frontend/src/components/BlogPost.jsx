@@ -42,7 +42,7 @@ const BlogPost = () => {
 
                 <div className="relative mb-12 group">
                     <div className="absolute -inset-1 bg-gradient-to-r from-[#a855f7] to-[#22d3ee] rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
-                    <img src={blog.image} alt={blog.title} className="relative w-full h-[300px] md:h-[400px] object-cover rounded-2xl shadow-2xl border border-white/10" />
+                    <img src={blog.image} alt={blog.title} loading="eager" className="relative w-full h-[300px] md:h-[400px] object-cover rounded-2xl shadow-2xl border border-white/10" />
                 </div>
                 
                 <div className="prose prose-invert prose-lg max-w-none text-gray-300">

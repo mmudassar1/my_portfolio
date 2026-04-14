@@ -164,7 +164,7 @@ const Projects = () => {
                             <div key={project.id} className="glow-card group" data-aos="fade-up" data-aos-delay={index * 100}>
                                 <div className="glow-card-bg"></div>
                                 <div className="glow-card-content overflow-hidden">
-                                    <img src={project.image} alt={project.title} className="w-full h-[200px] object-cover border-b border-white/10" />
+                                    <img src={project.image} alt={project.title} loading="eager" className="w-full h-[200px] object-cover border-b border-white/10" />
                                     <div className="p-6">
                                         <div className="flex justify-between items-center mb-4">
                                             <h3 className="text-xl font-bold text-white">{project.title}</h3>

@@ -11,7 +11,7 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-10 mb-5">
                     <div className="footer-left">
                         <div className="flex items-center gap-3">
-                            <img src="/logo1.png" alt="Logo" className="w-12 h-10 object-contain" />
+                            <img src="/logo1.png" alt="Logo" loading="eager" className="w-12 h-10 object-contain" />
                             <span className="text-white font-bold tracking-wider text-xl">MUDASSAR<span className="text-[#a855f7]"></span></span>
                         </div>
                     </div>

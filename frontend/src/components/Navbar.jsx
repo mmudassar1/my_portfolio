@@ -19,7 +19,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <div className="flex-shrink-0">
                     <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-all">
-                        <img src="/logo1.png" alt="Logo" className="w-12 h-10 md:w-13 md:h-12 object-contain" />
+                        <img src="/logo1.png" alt="Logo" loading="eager" className="w-12 h-10 md:w-13 md:h-12 object-contain" />
                     </Link>
                 </div>
 

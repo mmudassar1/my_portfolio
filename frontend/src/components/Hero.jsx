@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { TypeAnimation } from 'react-type-animation';
+import Typewriter from 'typewriter-effect';
 
 const Hero = () => {
     return (
@@ -29,32 +29,29 @@ const Hero = () => {
                         Available for new projects
                     </div>
 
-                    <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-7xl font-bold leading-[1.1] mb-6 md:mb-8 tracking-tight text-white">
-                        <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl block mb-2 text-gray-300 font-poppins font-bold tracking-normal"> Hi, I'm <span className="text-transparent font-poppins bg-clip-text bg-gradient-to-r from-[#22d3ee] to-[#a855f7]">Mudassar</span></span>
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-7xl font-bold leading-[1.1] mb-4 md:mb-6 tracking-tight text-white">
+                        <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl block mb-2 text-gray-300 font-poppins font-bold tracking-normal"> Hi, I'm <span className="text-transparent font-poppins bg-clip-text bg-gradient-to-r from-[#22d3ee] to-[#a855f7]">Mudassar</span></span>
                     </h1>
 
-                    <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 md:mb-8 h-[50px] sm:h-[40px] md:h-[50px] flex items-center">
-                        <TypeAnimation
-                            sequence={[
-                                "Full Stack Developer",
-                                1000,
-                                "MERN Stack Expert",
-                                1000,
-                                "React.js & Next.js Developer",
-                                1000,
-                                "Node.js & Backend Developer",
-                                1000,
-                                "UI/UX & Frontend Developer",
-                                1000,
-                            ]}
-                            wrapper="span"
-                            speed={50}
-                            className="text-transparent bg-clip-text bg-gradient-to-r from-[#22d3ee] to-[#a855f7]"
-                            repeat={Infinity}
-                        />
+                    <div className="text-md sm:text-xl md:text-2xl lg:text-2xl font-bold h-[50px] sm:h-[40px] md:h-[50px] flex items-center text-transparent bg-clip-text bg-gradient-to-r from-[#22d3ee] to-[#a855f7]">
+                        I&nbsp;
+                        <Typewriter
+                            options={{
+                                strings: [
+                                    "Build Responsive Web Apps",
+                                    "Build MERN Stack Applications",
+                                    "Build Scalable Backend Systems",
+                                    "Build Modern UI/UX Designs",
+                                ],
+                                autoStart: true,
+                                loop: true,
+                                delay: 70,
+                                deleteSpeed: 70,
+                            }}
+                        />I&nbsp;
                     </div>
 
-                    <p className="text-gray-400 text-lg md:text-xl mb-8 md:mb-10 max-w-[600px] leading-relaxed">
+                    <p className="text-gray-400 text-sm md:text-lg mb-6 md:mb-8 max-w-[600px] leading-relaxed">
                         I create <span className="text-white font-medium">high-performance</span>,
                         <span className="text-white font-medium"> scalable</span> solutions that drive meaningful user experiences.
                     </p>
@@ -63,15 +60,15 @@ const Hero = () => {
                             View Projects
                             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </Link>
-                        <Link to="/about" className="px-6 py-3 md:px-8 md:py-4 bg-transparent border-2 border-white/10 text-white font-bold rounded-xl hover:bg-white/5 transition-all backdrop-blur-sm flex items-center justify-center text-sm md:text-base">
-                            My Skills
+                        <Link to="/contact" className="px-6 py-3 md:px-8 md:py-4 bg-transparent border-2 border-white/10 text-white font-bold rounded-xl hover:bg-white/5 transition-all backdrop-blur-sm flex items-center justify-center text-sm md:text-base">
+                            Connect With
                         </Link>
                     </div>
                     <div className="flex gap-4">
-                         {[
-                                    { icon: <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>, url: "https://github.com/mmudassar1" },
-                                    { icon: <><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></>, url: "https://linkedin.com/in/mmudassar001" },
-                            { icon: <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .004 5.411.001 12.049c0 2.123.554 4.197 1.607 6.037L0 24l6.105-1.602a11.834 11.834 0 005.937 1.598h.005c6.637 0 12.046-5.411 12.049-12.05a11.811 11.811 0 00-3.533-8.528z" fill="currentColor" stroke="none"/>, url: "https://wa.me/923224146584" },
+                        {[
+                            { icon: <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>, url: "https://github.com/mmudassar1" },
+                            { icon: <><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></>, url: "https://linkedin.com/in/mmudassar001" },
+                            { icon: <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .004 5.411.001 12.049c0 2.123.554 4.197 1.607 6.037L0 24l6.105-1.602a11.834 11.834 0 005.937 1.598h.005c6.637 0 12.046-5.411 12.049-12.05a11.811 11.811 0 00-3.533-8.528z" fill="currentColor" stroke="none" />, url: "https://wa.me/923224146584" },
                         ].map((social, i) => (
                             <a key={i} href={social.url} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-white/5 flex justify-center items-center text-white transition-all hover:bg-[#a855f7] hover:scale-110">
                                 <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">{social.icon}</svg>
@@ -117,6 +114,7 @@ const Hero = () => {
                             <img
                                 src="/pic1.png"
                                 alt="Developer Avatar"
+                                loading="eager"
                                 className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
                             />
 
