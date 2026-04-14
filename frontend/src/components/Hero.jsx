@@ -52,8 +52,8 @@ const Hero = () => {
                     </div>
 
                     <p className="text-gray-400 text-sm md:text-lg mb-6 md:mb-8 max-w-[600px] leading-relaxed">
-                        I create <span className="text-white font-medium">high-performance</span>,
-                        <span className="text-white font-medium"> scalable</span> solutions that drive meaningful user experiences.
+                        I Build <span className="text-white font-medium">high-performance</span>,
+                        <span className="text-white font-medium"> scalable</span>web applications that help businesses grow faster and convert more customers.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 mb-10">
                         <Link to="/projects" className="px-6 py-3 md:px-8 md:py-4 bg-[#a855f7] text-white font-bold rounded-xl hover:scale-105 transition-all shadow-lg shadow-[#a855f7]/25 hover:shadow-[#a855f7]/40 flex items-center justify-center gap-2 group text-sm md:text-base">
